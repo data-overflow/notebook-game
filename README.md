@@ -19,11 +19,9 @@ NOTE: THIS IS NOT A POST-JAM UPDATE. THIS VERSION INCLUDES MINOR BUG FIXES ONLY.
 
 ==========================================================================
 CONTROLS
-+------------------------------------------+
-| Use <arrow keys> or <left stick> to move |
-| Press <up arrow> or <xbox A> to jump     |
-| Press <Esc> to quit game                 |
-+------------------------------------------+
+* Use <arrow keys> or <left stick> to move 
+* Press <up arrow> or <xbox A> to jump     
+* Press <Esc> to quit game
 
 
 ==========================================================================
