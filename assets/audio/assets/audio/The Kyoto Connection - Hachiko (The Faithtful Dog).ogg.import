@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/The Kyoto Connection - Hachiko (The Faithtful Dog).ogg-33163fb5f3b251f8e0a3c3eeaf52f991.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/The Kyoto Connection - Hachiko (The Faithtful Dog).ogg"
+dest_files=[ "res://.import/The Kyoto Connection - Hachiko (The Faithtful Dog).ogg-33163fb5f3b251f8e0a3c3eeaf52f991.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
