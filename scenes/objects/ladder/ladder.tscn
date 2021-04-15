@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/objects/ladder/ladder_patch.png" type="Texture" id=1]
+[ext_resource path="res://scenes/objects/ladder/ladder.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 25, 24 )
+
+[node name="Ladder" type="TextureRect"]
+margin_right = 31.0
+margin_bottom = 48.0
+texture = ExtResource( 1 )
+stretch_mode = 2
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Area" type="Area2D" parent="."]
+linear_damp = 50.0
+angular_damp = 10.0
+
+[node name="Hitbox" type="CollisionShape2D" parent="Area"]
+position = Vector2( 15, 24 )
+shape = SubResource( 1 )

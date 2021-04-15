@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/creativeminds.mp3-9125d90c35365178951464c34a4621a0.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/creativeminds.mp3"
+dest_files=[ "res://.import/creativeminds.mp3-9125d90c35365178951464c34a4621a0.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

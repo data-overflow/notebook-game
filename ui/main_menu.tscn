@@ -1,0 +1,491 @@
+[gd_scene load_steps=32 format=2]
+
+[ext_resource path="res://assets/bg.png" type="Texture" id=1]
+[ext_resource path="res://scenes/environment/thorns.tscn" type="PackedScene" id=2]
+[ext_resource path="res://ui/play.png" type="Texture" id=3]
+[ext_resource path="res://scenes/environment/blocks.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/finish/finish.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/player/player.tscn" type="PackedScene" id=6]
+[ext_resource path="res://ui/ui_theme.tres" type="Theme" id=7]
+[ext_resource path="res://scenes/environment/thorns.png" type="Texture" id=8]
+[ext_resource path="res://assets/title.png" type="Texture" id=9]
+[ext_resource path="res://scenes/environment/blocks.png" type="Texture" id=10]
+[ext_resource path="res://ui/main_menu.gd" type="Script" id=11]
+[ext_resource path="res://scenes/objects/ladder/ladder.tscn" type="PackedScene" id=12]
+[ext_resource path="res://scenes/objects/box/box.tscn" type="PackedScene" id=13]
+[ext_resource path="res://assets/audio/creativeminds.mp3" type="AudioStream" id=14]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+points = PoolVector2Array( 16, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+points = PoolVector2Array( 0, 16, 0, 16, 16, 8, 16, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=4]
+points = PoolVector2Array( 0, 8, 0, 8, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=5]
+points = PoolVector2Array( 0, 8, 16, 8, 16, 16, 0, 16 )
+
+[sub_resource type="TileSet" id=6]
+0/name = "blocks.png 0"
+0/texture = ExtResource( 10 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 16, 16 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 1 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+1/name = "blocks.png 1"
+1/texture = ExtResource( 10 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 16, 0, 16, 16 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 2 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+1/z_index = 0
+2/name = "blocks.png 2"
+2/texture = ExtResource( 10 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 32, 0, 16, 16 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape = SubResource( 3 )
+2/shape_one_way = false
+2/shape_one_way_margin = 1.0
+2/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 3 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+2/z_index = 0
+3/name = "blocks.png 3"
+3/texture = ExtResource( 10 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 48, 0, 16, 16 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape = SubResource( 4 )
+3/shape_one_way = false
+3/shape_one_way_margin = 1.0
+3/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 4 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+3/z_index = 0
+4/name = "blocks.png 4"
+4/texture = ExtResource( 10 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 64, 0, 16, 16 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape = SubResource( 5 )
+4/shape_one_way = false
+4/shape_one_way_margin = 1.0
+4/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+4/z_index = 0
+
+[sub_resource type="ConvexPolygonShape2D" id=7]
+points = PoolVector2Array( 32, 16, 0, 16, 0, 8, 32, 8 )
+
+[sub_resource type="ConvexPolygonShape2D" id=8]
+points = PoolVector2Array( 16, 16, 24, 0, 32, 16, 0, 16, 8, 0 )
+
+[sub_resource type="TileSet" id=9]
+0/name = "thorns.png 0"
+0/texture = ExtResource( 8 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 32, 16 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 7 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 7 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+1/name = "thorns.png 1"
+1/texture = ExtResource( 8 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 32, 0, 32, 16 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 8 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 8 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+1/z_index = 0
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 9 )
+region = Rect2( 0, 0, 273, 68 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 9 )
+region = Rect2( 273, 0, 273, 68 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 9 )
+region = Rect2( 546, 0, 273, 68 )
+
+[sub_resource type="SpriteFrames" id=13]
+animations = [ {
+"frames": [ SubResource( 10 ), SubResource( 11 ), SubResource( 12 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="Shader" id=14]
+code = "/*
+Godot 3 2D CRT Shader.
+A 2D shader for Godot 3 simulating a CRT..
+Author: hiulit
+Repository: https://github.com/hiulit/Godot-3-2D-CRT-Shader
+Issues: https://github.com/hiulit/Godot-3-2D-CRT-Shader/issues
+License: MIT https://github.com/hiulit/Godot-3-2D-CRT-Shader/blob/master/LICENSE
+*/
+
+shader_type canvas_item;
+
+const float PI = 3.14159265359;
+
+uniform vec2 screen_size = vec2(320.0, 180.0);
+uniform bool show_curvature = true;
+uniform float curvature_x_amount : hint_range(3.0, 15.0, 0.01) = float(6.0); 
+uniform float curvature_y_amount : hint_range(3.0, 15.0, 0.01) = float(4.0);
+uniform vec4 corner_color : hint_color = vec4(0.0, 0.0, 0.0, 1.0);
+uniform bool show_vignette = true;
+uniform float vignette_opacity : hint_range(0.0, 1.0, 0.01) = 0.2;
+uniform bool show_horizontal_scan_lines = true;
+uniform float horizontal_scan_lines_amount : hint_range(0.0, 180.0, 0.1) = 180.0;
+uniform float horizontal_scan_lines_opacity : hint_range(0.0, 1.0, 0.01) = 1.0;
+uniform bool show_vertical_scan_lines = false;
+uniform float vertical_scan_lines_amount : hint_range(0.0, 320.0, 0.1) = 320.0;
+uniform float vertical_scan_lines_opacity : hint_range(0.0, 1.0, 0.01) = 1.0;
+uniform float boost : hint_range(1.0, 2.0, 0.01) = 1.2;
+uniform float aberration_amount : hint_range(0.0, 10.0, 0.01) = 0.0;
+
+vec2 uv_curve(vec2 uv) {
+	if (show_curvature) {
+		uv = uv * 2.0 - 1.0;
+		vec2 offset = abs(uv.yx) / vec2(curvature_x_amount, curvature_y_amount);
+		uv = uv + uv * offset * offset;
+		uv = uv * 0.5 + 0.5;
+	}
+
+	return uv;
+}
+
+
+void fragment() {
+	vec2 uv = uv_curve(UV);
+	vec2 screen_uv = uv_curve(SCREEN_UV);
+	vec3 color = texture(SCREEN_TEXTURE, screen_uv).rgb;
+
+	if (aberration_amount > 0.0) {
+		float adjusted_amount = aberration_amount / screen_size.x;
+		color.r = texture(SCREEN_TEXTURE, vec2(screen_uv.x + adjusted_amount, screen_uv.y)).r;
+		color.g = texture(SCREEN_TEXTURE, screen_uv).g;
+		color.b = texture(SCREEN_TEXTURE, vec2(screen_uv.x - adjusted_amount, screen_uv.y)).b;
+	}
+
+	if (show_vignette) {
+		float vignette = uv.x * uv.y * (1.0 - uv.x) * (1.0 - uv.y);
+		vignette = clamp(pow((screen_size.x / 4.0) * vignette, vignette_opacity), 0.0, 1.0);
+		color *= vignette;
+	}
+
+	if (show_horizontal_scan_lines) {
+		float s = sin(screen_uv.y * horizontal_scan_lines_amount * PI * 2.0);
+		s = (s * 0.5 + 0.5) * 0.9 + 0.1;
+		vec4 scan_line = vec4(vec3(pow(s, horizontal_scan_lines_opacity)), 1.0);
+		color *= scan_line.rgb;
+	}
+
+	if (show_vertical_scan_lines) {
+		float s = sin(screen_uv.x * vertical_scan_lines_amount * PI * 2.0);
+		s = (s * 0.5 + 0.5) * 0.9 + 0.1;
+		vec4 scan_line = vec4(vec3(pow(s, vertical_scan_lines_opacity)), 1.0);
+		color *= scan_line.rgb;
+	}
+
+	if (show_horizontal_scan_lines || show_vertical_scan_lines) {
+		color *= boost;
+	}
+
+	// Fill the blank space of the corners, left by the curvature, with black.
+	if (uv.x < 0.0 || uv.x > 1.0 || uv.y < 0.0 || uv.y > 1.0) {
+		color = corner_color.rgb;
+	}
+
+	COLOR = vec4(color, 1.0);
+}"
+
+[sub_resource type="ShaderMaterial" id=15]
+shader = SubResource( 14 )
+shader_param/screen_size = Vector2( 800, 600 )
+shader_param/show_curvature = true
+shader_param/curvature_x_amount = 6.0
+shader_param/curvature_y_amount = 4.0
+shader_param/corner_color = Color( 0, 0, 0, 0.784314 )
+shader_param/show_vignette = true
+shader_param/vignette_opacity = 0.1
+shader_param/show_horizontal_scan_lines = true
+shader_param/horizontal_scan_lines_amount = 180.0
+shader_param/horizontal_scan_lines_opacity = 0.2
+shader_param/show_vertical_scan_lines = true
+shader_param/vertical_scan_lines_amount = 320.0
+shader_param/vertical_scan_lines_opacity = 0.1
+shader_param/boost = 1.12
+shader_param/aberration_amount = 0.65
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 117, 23 )
+
+[sub_resource type="AnimatedTexture" id=17]
+frames = 4
+fps = 5.0
+frame_0/texture = SubResource( 16 )
+frame_1/delay_sec = 0.0
+frame_2/delay_sec = 0.0
+frame_3/delay_sec = 0.0
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource( 11 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.5, 0.5 )
+motion_mirroring = Vector2( 960, 720 )
+
+[node name="bg" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+texture = ExtResource( 1 )
+centered = false
+
+[node name="Blocks" parent="." instance=ExtResource( 4 )]
+tile_set = SubResource( 6 )
+cell_size = Vector2( 16, 16 )
+show_collision = false
+tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 16, 0, 0, 17, 0, 0, 18, 0, 0, 19, 0, 0, 20, 0, 0, 21, 0, 0, 22, 0, 0, 23, 0, 0, 24, 0, 0, 25, 0, 0, 26, 0, 0, 27, 0, 0, 28, 0, 0, 29, 0, 0, 30, 0, 0, 31, 0, 0, 32, 0, 0, 33, 0, 0, 34, 0, 0, 35, 0, 0, 36, 0, 0, 37, 0, 0, 38, 0, 0, 39, 0, 0, 40, 0, 0, 41, 0, 0, 42, 0, 0, 43, 0, 0, 44, 0, 0, 45, 0, 0, 46, 0, 0, 47, 0, 0, 48, 0, 0, 49, 0, 0, 65536, 0, 0, 65539, 0, 0, 65542, 0, 0, 65544, 0, 0, 65547, 0, 0, 65549, 0, 0, 65550, 0, 0, 65551, 0, 0, 65552, 0, 0, 65554, 0, 0, 65558, 0, 0, 65561, 0, 0, 65563, 0, 0, 65566, 0, 0, 65568, 0, 0, 65571, 0, 0, 65573, 0, 0, 65575, 0, 0, 65585, 0, 0, 131072, 0, 0, 131075, 0, 0, 131076, 0, 0, 131078, 0, 0, 131080, 0, 0, 131083, 0, 0, 131086, 0, 0, 131090, 0, 0, 131091, 0, 0, 131094, 0, 0, 131096, 0, 0, 131099, 0, 0, 131102, 0, 0, 131104, 0, 0, 131107, 0, 0, 131109, 0, 0, 131110, 0, 0, 131121, 0, 0, 196608, 0, 0, 196611, 0, 0, 196613, 0, 0, 196614, 0, 0, 196616, 0, 0, 196617, 0, 0, 196618, 0, 0, 196622, 0, 0, 196626, 0, 0, 196630, 0, 0, 196631, 0, 0, 196632, 0, 0, 196635, 0, 0, 196636, 0, 0, 196637, 0, 0, 196640, 0, 0, 196641, 0, 0, 196642, 0, 0, 196645, 0, 0, 196647, 0, 0, 196657, 0, 0, 262144, 0, 0, 262147, 0, 0, 262150, 0, 0, 262158, 0, 0, 262162, 0, 0, 262163, 0, 0, 262164, 0, 0, 262166, 0, 0, 262169, 0, 0, 262181, 0, 0, 262184, 0, 0, 262193, 0, 0, 327680, 0, 0, 327683, 0, 0, 327694, 0, 0, 327702, 0, 0, 327703, 0, 0, 327704, 0, 0, 327721, 0, 0, 327729, 0, 0, 393216, 0, 0, 393219, 0, 0, 393265, 0, 0, 458752, 0, 0, 458801, 0, 0, 524288, 0, 0, 524337, 0, 0, 589824, 0, 0, 589873, 0, 0, 655360, 0, 0, 655409, 0, 0, 720896, 0, 0, 720945, 0, 0, 786432, 0, 0, 786481, 0, 0, 851968, 0, 0, 852017, 0, 0, 917504, 0, 0, 917553, 0, 0, 983040, 0, 0, 983089, 0, 0, 1048576, 0, 0, 1048625, 0, 0, 1114112, 0, 0, 1114161, 0, 0, 1179648, 0, 0, 1179697, 0, 0, 1245184, 0, 0, 1245233, 0, 0, 1310720, 0, 0, 1310769, 0, 0, 1376256, 0, 0, 1376305, 0, 0, 1441792, 0, 0, 1441841, 0, 0, 1507328, 0, 0, 1507377, 0, 0, 1572864, 0, 0, 1572913, 0, 0, 1638400, 0, 0, 1638449, 0, 0, 1703936, 0, 0, 1703985, 0, 0, 1769472, 0, 0, 1769521, 0, 0, 1835008, 0, 0, 1835057, 0, 0, 1900544, 0, 0, 1900593, 0, 0, 1966080, 0, 0, 1966129, 0, 0, 2031616, 0, 0, 2031659, 0, 0, 2031660, 0, 0, 2031661, 0, 0, 2031662, 0, 0, 2031663, 0, 0, 2031664, 0, 0, 2031665, 0, 0, 2097152, 0, 0, 2097195, 0, 0, 2097196, 0, 0, 2097197, 0, 0, 2097198, 0, 0, 2097199, 0, 0, 2097200, 0, 0, 2097201, 0, 0, 2162688, 0, 0, 2162689, 0, 0, 2162690, 0, 0, 2162691, 0, 0, 2162692, 0, 0, 2162694, 0, 0, 2162695, 0, 0, 2162696, 0, 0, 2162697, 0, 0, 2162698, 0, 0, 2162702, 0, 0, 2162703, 0, 0, 2162705, 0, 0, 2162706, 0, 0, 2162707, 0, 0, 2162731, 0, 0, 2162732, 0, 0, 2162733, 0, 0, 2162734, 0, 0, 2162735, 0, 0, 2162736, 0, 0, 2162737, 0, 0, 2228224, 0, 0, 2228225, 0, 0, 2228231, 0, 0, 2228232, 0, 0, 2228234, 0, 0, 2228235, 0, 0, 2228237, 0, 0, 2228238, 0, 0, 2228241, 0, 0, 2228267, 0, 0, 2228268, 0, 0, 2228269, 0, 0, 2228270, 0, 0, 2228271, 0, 0, 2228272, 0, 0, 2228273, 0, 0, 2293760, 0, 0, 2293761, 0, 0, 2293763, 0, 0, 2293764, 0, 0, 2293766, 0, 0, 2293768, 0, 0, 2293770, 0, 0, 2293772, 0, 0, 2293774, 0, 0, 2293777, 0, 0, 2293778, 0, 0, 2293779, 0, 0, 2293803, 0, 0, 2293804, 0, 0, 2293805, 0, 0, 2293806, 0, 0, 2293807, 0, 0, 2293808, 0, 0, 2293809, 0, 0, 2359296, 0, 0, 2359297, 0, 0, 2359300, 0, 0, 2359301, 0, 0, 2359302, 0, 0, 2359303, 0, 0, 2359304, 0, 0, 2359306, 0, 0, 2359310, 0, 0, 2359313, 0, 0, 2359339, 0, 0, 2359340, 0, 0, 2359341, 0, 0, 2359342, 0, 0, 2359343, 0, 0, 2359344, 0, 0, 2359345, 0, 0, 2424832, 0, 0, 2424833, 0, 0, 2424834, 0, 0, 2424835, 0, 0, 2424836, 0, 0, 2424837, 0, 0, 2424838, 0, 0, 2424839, 0, 0, 2424840, 0, 0, 2424841, 0, 0, 2424842, 0, 0, 2424843, 0, 0, 2424844, 0, 0, 2424845, 0, 0, 2424846, 0, 0, 2424847, 0, 0, 2424848, 0, 0, 2424849, 0, 0, 2424850, 0, 0, 2424851, 0, 0, 2424852, 0, 0, 2424853, 0, 0, 2424854, 0, 0, 2424855, 0, 0, 2424856, 0, 0, 2424857, 0, 0, 2424858, 0, 0, 2424859, 0, 0, 2424860, 0, 0, 2424861, 0, 0, 2424862, 0, 0, 2424863, 0, 0, 2424864, 0, 0, 2424865, 0, 0, 2424866, 0, 0, 2424867, 0, 0, 2424868, 0, 0, 2424869, 0, 0, 2424870, 0, 0, 2424871, 0, 0, 2424872, 0, 0, 2424873, 0, 0, 2424874, 0, 0, 2424875, 0, 0, 2424876, 0, 0, 2424877, 0, 0, 2424878, 0, 0, 2424879, 0, 0, 2424880, 0, 0, 2424881, 0, 0 )
+
+[node name="Thorns" parent="." instance=ExtResource( 2 )]
+tile_set = SubResource( 9 )
+
+[node name="Finish" parent="." instance=ExtResource( 5 )]
+position = Vector2( 883.344, 293.176 )
+
+[node name="Box" parent="." instance=ExtResource( 13 )]
+position = Vector2( 468, 480 )
+scale = Vector2( 1.00825, 1.00715 )
+
+[node name="Ladder" parent="." instance=ExtResource( 12 )]
+margin_left = 34.0
+margin_top = 176.0
+margin_right = 65.0
+margin_bottom = 510.0
+
+[node name="Player" parent="." instance=ExtResource( 6 )]
+position = Vector2( 728, 368 )
+flip = true
+
+[node name="Title" type="AnimatedSprite" parent="."]
+modulate = Color( 1, 1, 1, 0.862745 )
+position = Vector2( 399.761, 187.638 )
+scale = Vector2( 2, 2 )
+frames = SubResource( 13 )
+frame = 1
+playing = true
+
+[node name="Shader" type="ColorRect" parent="."]
+material = SubResource( 15 )
+margin_right = 800.0
+margin_bottom = 600.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Interface" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton" type="TextureButton" parent="Interface"]
+visible = false
+margin_top = 81.0
+margin_right = 468.0
+margin_bottom = 121.0
+texture_normal = SubResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Interface"]
+margin_left = 732.246
+margin_top = 565.426
+margin_right = 772.246
+margin_bottom = 584.426
+theme = ExtResource( 7 )
+text = "V1.1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Buttons" type="GridContainer" parent="Interface"]
+margin_left = 176.0
+margin_top = 296.0
+margin_right = 648.0
+margin_bottom = 408.0
+columns = 2
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="PlayButton" type="Button" parent="Interface/Buttons"]
+margin_right = 234.0
+margin_bottom = 52.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 7 )
+text = "PLAY"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SettingsButton" type="Button" parent="Interface/Buttons"]
+visible = false
+margin_left = 178.0
+margin_top = 408.0
+margin_right = 404.0
+margin_bottom = 468.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 7 )
+text = "SETTINGS"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="QuitButton" type="Button" parent="Interface/Buttons"]
+margin_left = 238.0
+margin_right = 472.0
+margin_bottom = 52.0
+theme = ExtResource( 7 )
+text = "QUIT"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Touch" type="Button" parent="Interface/Buttons"]
+margin_top = 56.0
+margin_right = 234.0
+margin_bottom = 108.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 7 )
+toggle_mode = true
+text = "TOGGLE TOUCH BUTTONS"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Graphics" type="Button" parent="Interface/Buttons"]
+margin_left = 238.0
+margin_top = 56.0
+margin_right = 472.0
+margin_bottom = 108.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 7 )
+toggle_mode = true
+pressed = true
+text = "TOGGLE GRAPHICS"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 14 )
+autoplay = true
+bus = "Music"
+
+[connection signal="pressed" from="Interface/Buttons/PlayButton" to="." method="_on_PlayButton_pressed"]
+[connection signal="pressed" from="Interface/Buttons/QuitButton" to="." method="_on_QuitButton_pressed"]
+[connection signal="toggled" from="Interface/Buttons/Touch" to="." method="_on_Touch_toggled"]
+[connection signal="toggled" from="Interface/Buttons/Graphics" to="." method="_on_Graphics_toggled"]
