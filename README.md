@@ -1,6 +1,6 @@
 
-## NOTEBOOK GAME v1.1
-### A Satisfying Platformer
+# NOTEBOOK GAME v1.1
+#### A Satisfying Platformer
 -----------------------
 
 Play the game at -> [itch.io](https://dataoverflow.itch.io/notebook-game)
