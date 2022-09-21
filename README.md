@@ -27,14 +27,13 @@ This game was made under the 72 hour time frame.
 * Press <Esc> to quit game
 
 
-+-----------------------------------+
-| UPDATE LOG                        |
-| v1.1                              |
-|  - Added support for WASD         |
-|  - Added main menu                |
-|  - Minor bug fixes                |
-|                                   |
-+-----------------------------------+
+
+> UPDATE LOG 
+> v1.1                              
+>  - Added support for WASD         
+>  - Added main menu                
+>  - Minor bug fixes                
+
 
 #### CREDITS
 A game by [DATA OVERFLOW](https://dataoverflow.itch.io/)
@@ -51,8 +50,8 @@ Sourced from www.bensound.com
 SOUND EFFECTS
 https://opengameart.org/content/512-sound-effects-8-bit-style
 
----------------------------------------
+
   
 A game made with Godot 3.2 and 3.3 beta
   
-=======================================
+---------------------------------------
