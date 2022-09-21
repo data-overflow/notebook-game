@@ -3,6 +3,9 @@
 ### A Satisfying Platformer
 -----------------------
 
+Play the game at -> [itch.io](https://dataoverflow.itch.io/notebook-game)
+
+
 #### ABOUT
 You are stuck inside a notebook filled with dangers and puzzles.. WAIT! Don't die! 
 Otherwise crazy things will happen.. Hmm.. do you think you can win the game? 
@@ -13,8 +16,9 @@ This game was made for Wowie Jame 3.0 (2021) on the theme:
 "FAILURE IS PROGRESS: Let's mess with the concept of winning and loosing"
 This game was made under the 72 hour time frame.
 
-> NOTE: THIS IS NOT A POST-JAM UPDATE. THIS VERSION INCLUDES MINOR BUG FIXES ONLY.
->      FEATURE UPDATES ARE COMING SOON..
+> NOTE: THIS IS NOT A POST-JAM UPDATE. THIS VERSION 
+>       INCLUDES MINOR BUG FIXES ONLY.
+>       FEATURE UPDATES ARE COMING SOON..
 
 
 #### CONTROLS
@@ -33,7 +37,7 @@ This game was made under the 72 hour time frame.
 +-----------------------------------+
 
 #### CREDITS
-A game by [DATA OVERFLOW](https://dataoverflow.itch.io)
+A game by [DATA OVERFLOW](https://dataoverflow.itch.io/)
 
 #### ATTRIBUTION
 MUSIC
@@ -48,5 +52,7 @@ SOUND EFFECTS
 https://opengameart.org/content/512-sound-effects-8-bit-style
 
 ---------------------------------------
+  
 A game made with Godot 3.2 and 3.3 beta
+  
 =======================================
