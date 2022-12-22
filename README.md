@@ -3,6 +3,8 @@
 #### A Satisfying Platformer
 -----------------------
 
+![game banner](PgWGSy.gif)
+
 Play the game at -> [itch.io](https://dataoverflow.itch.io/notebook-game)
 
 
